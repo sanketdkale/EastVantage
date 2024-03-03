@@ -1,0 +1,23 @@
+Question 1: Explain how FastAPI handles asynchronous requests and its benefits over synchronous code in Python.
+
+FastAPI is like a toolbox that helps developers build web applications (like websites or services). One of its cool features is how it handles requests - those are messages your app gets when someone uses it, like clicking a button or sending a form.
+
+FastAPI can handle these requests in a way that's super efficient. It does this by using something called asynchronous programming. Think of it like having multiple hands - FastAPI can do different things at the same time without getting confused.
+
+Advantages:-
+1]Faster Performance:FastAPI can handle lots of requests quickly because it doesn't have to wait around for one request to finish before starting another one.
+2]Handles Lots of Users: If your app becomes popular and lots of people are using it at once, FastAPI can handle all those requests without slowing down or crashing.
+3]Works Well with Other Parts: FastAPI can talk to databases, other websites, or services without waiting, which keeps your app running smoothly.
+4]Better User Experience: Because FastAPI can respond to requests quickly, users get what they want faster, making for a happier experience.
+5]Simplifies Complex Tasks: It can handle many tasks at once without getting tangled up, making it easier for developers to build complex features.
+
+=======================================================================================================================
+Question 2:
+Describe how dependency injection works in FastAPI and give an example of its practical use.
+
+Dependency injection is like getting the tools you need to do a job handed to you instead of having to find them yourself. In programming, it means getting the pieces of code (dependencies) you need to run a function without having to worry about where they come from.
+
+How works in FastAPI:
+1)You tell FastAPI what tools (dependencies) your function needs by mentioning them in the function's definition.
+2)FastAPI takes care of finding those tools for you and giving them to your function when it's called.
+

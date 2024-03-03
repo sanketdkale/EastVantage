@@ -1,0 +1,54 @@
+API Endpoints
+	1)Add a Book:
+	
+		Endpoint: POST /books/
+		Description: Adds a new book to the database.
+		Request Body:
+		title (str): Title of the book.
+		author (str): Author of the book.
+		publication_year (int): Publication year of the book.
+		Response:
+		Status Code: 200 OK
+		Content: { "message": "Book added successfully" }
+		
+	2)Submit a Review:
+	
+		Endpoint: POST /books/{book_id}/reviews/
+		Description: Submits a review for the specified book.
+		Path Parameters:
+		book_id (int): ID of the book to review.
+		Request Body:
+		text (str): Review text.
+		rating (int): Rating for the book (1-5).
+		Response:
+		Status Code: 200 OK
+		Content: { "message": "Review submitted successfully" }
+		
+	3)Get Books:
+	
+		Endpoint: GET /books/
+		Description: Retrieves a list of books from the database.
+		Query Parameters:
+		author (str, optional): Filters books by author.
+		publication_year (int, optional): Filters books by publication year.
+		Response:
+		Status Code: 200 OK
+		Content: List of books matching the query parameters.
+		
+	4)Get Reviews:
+	
+		Endpoint: GET /books/{book_id}/reviews/
+		Description: Retrieves reviews for the specified book.
+		Path Parameters:
+		book_id (int): ID of the book to get reviews for.
+		Response:
+		Status Code: 200 OK
+		Content: List of reviews for the specified book, or a message if no reviews are found.
+		
+	5)Error Handling:
+	
+		HTTPException Handler
+		Description: Handles HTTP exceptions and returns appropriate JSON responses.
+		Response:
+		Status Code: Varies depending on the exception
+		Content: { "message": "<detail>" }
